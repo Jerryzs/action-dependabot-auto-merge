@@ -25,8 +25,7 @@ export default async function (inputs) {
   })
 
   if (proceed) {
-    const command = inputs.approve === 'true' ? approve : comment
-
-    await command(octokit, repo, pull_request, `@dependabot ${inputs.command}`)
+    if (inputs.approve === 'true') await approve(octokit, repo, pull_request)
+    await merge(octokit, repo, pull_request, inputs.method)
   }
 }

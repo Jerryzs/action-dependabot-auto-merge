@@ -1,16 +1,15 @@
-export async function approve (octokit, repo, { number }, body) {
+export async function approve (octokit, repo, { number }) {
   await octokit.pulls.createReview({
     ...repo,
     pull_number: number,
-    event: 'APPROVE',
-    body
+    event: 'APPROVE'
   })
 }
 
-export async function comment (octokit, repo, { number }, body) {
-  await octokit.issues.createComment({
+export async function merge (octokit, repo, { number }, method) {
+  await octokit.pulls.merge({
     ...repo,
-    issue_number: number,
-    body
+    pull_number: number,
+    merge_method: method
   })
 }
