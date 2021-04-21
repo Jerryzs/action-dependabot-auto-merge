@@ -15,8 +15,8 @@ inputs:
     default: .github/auto-merge.yml
     required: false
 
-  command:
-    description: The command to pass to Dependabot as a comment
+  method:
+    description: Method used to merge the pull-request
     default: merge
     required: false
 
@@ -32,4 +32,4 @@ inputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/ahmadnassri/action-dependabot-auto-merge:v2
+  image: 'Dockerfile'
