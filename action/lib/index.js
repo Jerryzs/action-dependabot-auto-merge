@@ -5,7 +5,7 @@ import github from '@actions/github'
 import parse from './parse.js'
 import config from './config.js'
 import dependencies from './dependencies.js'
-import { approve, comment } from './api.js'
+import { approve, merge } from './api.js'
 
 const workspace = process.env.GITHUB_WORKSPACE || '/github/workspace'
 
