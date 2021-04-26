@@ -15,11 +15,6 @@ inputs:
     default: .github/auto-merge.yml
     required: false
 
-  method:
-    description: Method used to merge the pull-request
-    default: merge
-    required: false
-
   approve:
     description: Auto-approve pull-requests
     default: 'true'

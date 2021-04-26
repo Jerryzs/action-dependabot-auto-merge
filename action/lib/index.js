@@ -26,6 +26,6 @@ export default async function (inputs) {
 
   if (proceed) {
     if (inputs.approve === 'true') await approve(octokit, repo, pull_request)
-    await merge(octokit, repo, pull_request, inputs.method)
+    await merge(octokit, repo, pull_request)
   }
 }
